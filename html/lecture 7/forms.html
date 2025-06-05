@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Fill the form to apply</h1>
+    <form action="post">
+        <div>
+            <label for="username">Enter your username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+        </div>
+        <div>
+            <input type="radio" id="Male" name="gender" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" id="Female" name="gender" value="Female">
+            <label for="Female">Female</label>
+        </div>
+        <div>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">subscribe to newsletter</label>
+        </div>
+        <div>
+            <label for="comment">Enter your comment here</label>
+            <br>
+            <textarea id="comment" name="comment" rows="10" cols="50"></textarea>
+        </div>
+        <div>
+            <select name="fruits">
+                <option value="apple">apple</option>
+                <option value="banana">banana</option>
+                <option value="cherry">cherry</option>
+            </select>
+        </div>
+        <div>
+            <label for="reset">Reset your form</label>
+            <input type="reset" id="reset" name="reset" value="reset">
+        </div>
+        <div>
+            <label for="price">enter your price range</label>
+            <input type="range" id="price" name="price" value="2" min="0" max="100" step="1">
+        </div>
+        <div>
+            <input type="search" id="site-search" name="site-search" placeholder="search..." >
+        </div>
+        <div>
+            <input type="file" id="resultcard" name="resultcard" placeholder="Select your resultcard">
+        </div>
+    </form>
+</body>
+
+</html>
