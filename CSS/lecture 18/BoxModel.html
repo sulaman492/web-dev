@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxModel</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            background-color: aqua;
+        }
+        .box1{
+            color: yellow;
+            /* padding is distance between border and content inside the div  */
+            padding:20px;
+            /* margin is the distance oustide the div to the page */
+            margin: 50px;
+            border:2px solid blue;
+            /* height property means that the height of element or content inside div should be 200px */
+            height: 200px;
+            /* box sizzing means that total height(including padding and margin) should be 200px  */
+              box-sizing: border-box;  
+        }
+        .box2{
+            color:red;
+            padding:20px;
+            margin: 50px;
+            border:2px solid black;
+            height: 200px;
+            box-sizing: border-box;  
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+</body>
+</html>
