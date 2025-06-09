@@ -1,0 +1,26 @@
+/* Order of specificity is inline >id selector>class or attribute selector>element selector>universal selector */
+/* the specificity of universal selector is 0 ,sepcificity of pseudo selector is 10 and id selector is 100 */
+/* Its sepecificity value is 1 */
+h1 {
+    color: blue;
+}
+
+/* Its sepecificity valeu is 10 */
+.cpurple {
+    color: pruple;
+}
+
+/* Its sepecificity valeu is 10 */
+.cred {
+    color: red;
+}
+
+/* Its sepecificity valeu is 10 */
+.cyellow {
+    color: yellow;
+}
+
+/* this is an example of attribute selector.Its sepecificity valeu is 10 */
+[data-x="10"] {
+    color: rgb(223, 27, 161);
+}
