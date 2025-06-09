@@ -1,0 +1,50 @@
+        /* Element selector */
+        div,
+        span {
+            color: red;
+            background-color: yellow;
+        }
+
+        /* class selector */
+        .red {
+            background-color: red;
+        }
+
+        /* Id Selector */
+        #green {
+            background-color: green;
+        }
+
+        /* Child selector */
+        div>p {
+            color: blue;
+            background-color: brown;
+        }
+
+        /* Descendent selector */
+        div p {
+            color: blue;
+            background-color: brown;
+        }
+
+        /* Universal selector */
+        * {
+            margin: 0;
+        }
+
+        /* Pseudo Selector  */
+        a:visited {
+            color: green;
+        }
+
+        a:link {
+            color: black
+        }
+
+        a:active {
+            background-color: red;
+        }
+
+        P:first-child {
+            background-color: pink;
+        }
