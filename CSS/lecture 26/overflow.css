@@ -1,0 +1,19 @@
+    .red {
+            width: 20vh;
+            height: 10vh;
+            border: 2px solid red;
+            overflow: scroll;
+           
+            /* Wrap long words if needed */
+            overflow-wrap: break-word;
+            /* Modern equivalent */
+            white-space: normal;
+            /* Allow normal wrapping */
+            text-align: justify;
+            padding: 10px;
+        }
+
+        .red::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Edge */
+        }
