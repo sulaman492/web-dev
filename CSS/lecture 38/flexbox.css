@@ -1,0 +1,45 @@
+.container {
+    border: 2px solid black;
+    display: flex;
+    height: 80vh;
+    /* justify-content: center; */
+    /*justify the content along the main axis*/
+    align-items: center;
+    /*align the content along cross axis*/
+    flex-direction: row;
+    /*flex direction used to exchange the main and cross axis.normally the flex direction is row and main axis is along x axis and cross axis is along y axis if we flex direction column then main and cross axis are exhanged*/
+    flex-wrap: wrap;
+    /*used to avoid overflow*/
+    align-content: center;
+    /*used when more than one line*/
+    row-gap: 20px;
+    column-gap: 40px;
+}
+
+.item {
+    width: 62px;
+    height: 62px;
+    background-color: purple;
+    border: 2px solid black;
+    flex-grow: 1;
+    /* margin: 2px; */
+    /* display: inline-block; */
+    /* align-self: ;property is used for an individual box to align it according tt the flex */
+}
+
+.order1 {
+    order: -1;
+    /*default order=0 higher the order of an item the later it will appear and vice versa*/
+}
+
+.order2 {
+    order: 2;
+}
+
+.order3 {
+    order: 3;
+}
+
+.item1 {
+    flex-grow: 8;
+}
