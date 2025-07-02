@@ -1,0 +1,30 @@
+.container {
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+
+}
+
+.box {
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+    animation-name: myanimation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 3;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+
+}
+
+@keyframes myanimation {
+    from {}
+
+    to {
+        transform: translateX(1000px);
+    }
+}

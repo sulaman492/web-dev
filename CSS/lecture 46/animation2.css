@@ -1,0 +1,45 @@
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: aliceblue;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    animation: backgroundAnimation 3s ease-in-out 1s infinite forwards,
+        movingAnimation 3s 1s infinite;
+
+}
+
+@keyframes backgroundAnimation {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: aqua;
+    }
+}
+
+@keyframes movingAnimation {
+    0% {
+        transform: translateX(10px);
+    }
+
+    20% {
+        transform: translateX(70px);
+    }
+
+    50% {
+        transform: translateX(120px);
+    }
+
+    70% {
+        transform: translateX(300px);
+    }
+
+    100% {
+        transform: translateX(500px);
+    }
+}
