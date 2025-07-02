@@ -1,0 +1,35 @@
+.logo img {
+    width: 160px;
+}
+
+nav {
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right ul {
+    display: flex;
+    gap: 34px;
+}
+
+.right ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.right ul li button {
+    background-color: #e3d8d8;
+    cursor: pointer;
+    font-weight: bold;
+    width: 91px;
+    height: 42px;
+    align-items: center;
+}
+
+.right ul li button:hover {
+    background-color: darkgrey;
+}

@@ -1,0 +1,45 @@
+        nav {
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+
+        }
+
+        .ultraeditimage {
+            width: 200px;
+            height: 90px;
+            padding-left: 50px;
+        }
+
+        .logoname {
+            flex-grow: 0.5;
+        }
+
+        .item,
+        .logoname {
+            padding-top: 20px;
+        }
+
+        .item {
+            color: #000000;
+            flex-grow: 0.1;
+            padding-top: 40px;
+            font-size: 15px;
+        }
+
+        .BuyNow {
+            width: 100px;
+            height: 49px;
+            margin-top: 26px;
+            cursor: pointer;
+        }
+
+        .BuyNow:hover {
+            background-color: darkgray;
+        }
+
+        a {
+            margin-top: 40px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
