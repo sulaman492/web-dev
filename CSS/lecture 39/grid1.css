@@ -1,24 +1,26 @@
-.container{
-            border: 2px solid black;
-            /* width: 50vh; */
-            display: grid;
-            grid-template-columns: [pehla]220px [doosra]150px ;
-            grid-template-rows: 100px 100px 100px 100px;
-            /* grid-template-columns: 1fr,2,fr; */
-            justify-items: center;
-            align-items: center;
-            /*used for alignment in the cell*/
+.container {
+    border: 2px solid black;
+    /* width: 50vh; */
+    display: grid;
+    grid-template-columns: [pehla]220px [doosra]150px;
+    grid-template-rows: 100px 100px 100px 100px;
+    /* grid-template-columns: 1fr,2,fr; */
+    justify-items: center;
+    align-items: center;
+    /*used for alignment in the cell*/
 
-            justify-content: center;
-            align-content: center;
-            /*used for alignment of the whole grid inside the container*/
-        }
-        .item{
-            width: 55px;
-            height: 55px;
-            border:2px solid red;
-        }
-        .item-4{
-            grid-row: 1/2;
-            grid-column: 1/2;
-        }
+    justify-content: center;
+    align-content: center;
+    /*used for alignment of the whole grid inside the container*/
+}
+
+.item {
+    width: 55px;
+    height: 55px;
+    border: 2px solid red;
+}
+
+.item-4 {
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
