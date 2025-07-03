@@ -1,0 +1,86 @@
+ .box {
+     height: 121px;
+     width: 121px;
+     background-color: red;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     border-radius: 70px;
+     animation: animationY 2s ease-out 1s infinite alternate;
+
+     /* animationX 3s ease-in-out 1s infinite ; */
+     /* cubic-bezier(0.73, 0.7, 0.07, 0.56) */
+ }
+
+ .wrapper {
+     animation: animationX 15s linear 1s infinite normal;
+
+ }
+
+ .container {
+     position: relative;
+     width: 80vw;
+     height: 80vh;
+     background-color: blue;
+ }
+
+ @keyframes animationY {
+
+     /* 0%{transform: translateY(0px);}
+            20%{transform: translateY(-140px);}
+            50%{transform: translateY(-200px);}
+            70%{transform: translateY(-250px);}
+            100%{transform: translateY(-270px);}
+             */
+     from {
+         transform: translateY(580px);
+
+     }
+
+     to {
+         transform: translateY(200px);
+         /* transform: translateX(100px); */
+     }
+ }
+
+ @keyframes animationX {
+     0% {
+         transform: translateX(0px);
+     }
+
+     20% {
+         transform: translateX(100px);
+     }
+
+     30% {
+         transform: translateX(200px);
+     }
+
+     40% {
+         transform: translateX(300px);
+     }
+
+     50% {
+         transform: translateX(400px);
+     }
+
+     60% {
+         transform: translateX(500px);
+     }
+
+     70% {
+         transform: translateX(600px);
+     }
+
+     80% {
+         transform: translateX(700px);
+     }
+
+     90% {
+         transform: translateX(800px);
+     }
+
+     100% {
+         transform: translateX(900px);
+     }
+ }
