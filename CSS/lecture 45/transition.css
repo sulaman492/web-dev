@@ -1,0 +1,22 @@
+   .container {
+       background-color: antiquewhite;
+       width: 90vw;
+       height: 50vh;
+   }
+
+   .box {
+       width: 10vw;
+       height: 10vh;
+       background-color: aqua;
+       transition-property: transform, background-color;
+       transition-duration: 3s;
+       transition-timing-function: cubic-bezier(0, 0.97, 0.1, 0.92);
+       transition-delay: 2s;
+       /* we can use all of them above in one transition property */
+       ;
+   }
+
+   .translate {
+       transform: translateX(10vw) translateY(10vh) scale(2);
+       background-color: black;
+   }
