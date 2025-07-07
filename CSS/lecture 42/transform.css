@@ -10,24 +10,24 @@
 
             /* rotate in tranform property used for rotating the box */
 
-            transform: rotateZ(45deg);
+            /* transform: rotateZ(45deg);
             transform: rotateX(45deg);
             transform: rotateY(45deg);
-            transform: rotate(45deg);
+            transform: rotate(45deg); */
 
             /*scale in transform property used for making the object bigger in size */
             
-            transform: scale(5.8);
+            /* transform: scale(5.8);
             transform: scaleX(5.8);
             transform: scaleY(5.8);
             transform: scaleZ(5.8); */
-            /* transform: scale3d(4.4,7.7,2,2);
+            /* transform: scale3d(4.4,7.7,2,2); */
 
             /*transform :skew*/
             
-            transform: skew(6deg);
+            /* transform: skew(6deg);
             transform: skewX(6deg);
-            transform: skewY(6deg);
+            transform: skewY(6deg); */
             
             /* translate in transform property is used to move the element in the container such that the layout remain unaffected */
             
