@@ -206,3 +206,6 @@ body {
         background-position: 100% 50%;
     }
 }
+.right ul li:hover{
+    transform: translateY(-5px);
+}
