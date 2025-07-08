@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS object fit property</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            background-color: azure;
+            width: 636px;
+            height:569px;
+            background-image: url("https://th.bing.com/th/id/R.50678e050e13bbadc6aa1128a513b0c9?rik=f%2fdvnv4K5oqa5A&riu=http%3a%2f%2fassets3.thrillist.com%2fv1%2fimage%2f1302701%2fsize%2ftl-cover_story_2x%2fthe-25-most-beautiful-college-campuses-in-america&ehk=Mw5xmrfCOQJU41ZrFUj404n45BMb5nWHh0mHAUQnqcA%3d&risl=&pid=ImgRaw&r=0");
+            background-position: top center;
+            /* background-fit:cover; */
+        }
+        img{
+            width: 636px;
+            height: 244px;
+            object-fit: cover;
+            /* object-position: bottom right; */
+            object-position: 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://th.bing.com/th/id/R.50678e050e13bbadc6aa1128a513b0c9?rik=f%2fdvnv4K5oqa5A&riu=http%3a%2f%2fassets3.thrillist.com%2fv1%2fimage%2f1302701%2fsize%2ftl-cover_story_2x%2fthe-25-most-beautiful-college-campuses-in-america&ehk=Mw5xmrfCOQJU41ZrFUj404n45BMb5nWHh0mHAUQnqcA%3d&risl=&pid=ImgRaw&r=0" alt="college image"> -->
+    </div>
+</body>
+</html>
