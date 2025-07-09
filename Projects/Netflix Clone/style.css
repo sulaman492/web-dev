@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    background-image: url("assets/images/background.png");
+    background-position: center center;
+    background-size:max(1200px,100vw) ;
+    background-repeat:no-repeat ;
+    height: 80vh;
+    /* width: 50vw; */
+    border: 2px solid black;
+    position: relative;
+    
+}
+.main .box{
+    height: 80vh;
+    width: 100%;
+    opacity: 0.44;
+    background-color: black;
+    position: absolute;
+    top: 0%;
+
+}
+nav{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    max-width: 80vw;
+    justify-content: space-between;
+    height: 62px;
+}
+nav img{
+    width: 114px;
+    color: red;
+    position: relative;
+    z-index: 10;
+}
+.hero{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 30px;
+    position: relative; 
+     z-index: 10; 
+}
