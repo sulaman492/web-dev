@@ -1,0 +1,19 @@
+const express=require("express");
+const router=express.Router();
+
+//middleware is specific to blog route
+router.use((req,res,next)=>{
+    console.log("Time : "+`${Date.now()}`);
+    next();
+    
+})
+
+router.get("/",(req,res,)=>{
+    res.send("blogs home page")
+})
+
+router.get("/about",(req,res)=>{
+    res.send("about blogs")
+})
+
+module.exports=router;
