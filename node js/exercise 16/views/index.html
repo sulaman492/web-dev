@@ -1,0 +1,46 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navabr</title>
+        <style>
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100vw;
+            }
+            .btn{
+                border: 2px solid black;
+                width: 100px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: darkgray;
+            }
+            button{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="btn">
+        <button>Generate Dummy Data</button>
+        </div>
+        <script>
+            let btn=document.querySelector("button");
+            btn.addEventListener("click",async()=>{
+                    let a=await fetch("/generate",{method:"POST"})
+                    let b=await a.text();
+                    console.log(b);
+                       btn.textContent = "Data Added";
+                          setTimeout(() => {
+            btn.textContent = "Generate Dummy Data";
+        }, 2000); // 2000 ms = 2 seconds
+            })
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,19 @@
+{
+  "name": "exercise-16",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "express": "^5.1.0",
+    "faker": "^6.6.6",
+    "mysql2": "^3.14.3",
+    "nodemon": "^3.1.10"
+  }
+}
