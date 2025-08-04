@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="quizForm">
+        <label class="Questions">Number of Questions:
+            <input type="number" name="amount" value="5" required />
+        </label><br />
+
+        <label>Difficulty:
+            <select name="difficulty" class="difficulty">
+                <option value="">Any Difficulty</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </label><br />
+
+        <label>Category:
+            <select name="category" class="category">
+                <option value="">Loading</option>
+                <!-- Add more categories from https://opentdb.com/api_category.php -->
+            </select>
+        </label><br />
+
+        <label>Type:
+            <select name="Type" class="type">
+                <option value="">Any Type</option>
+                <option value="multiple">Multiple Choice</option>
+                <option value="boolean">True / False</option>
+            </select>
+        </label>
+        <div class="sbmit">
+            <button type="submit" id="sub">Start Quiz</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+ * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        form {
+            width: 30vw;
+            height: 60vh;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            flex-direction: column;
+
+        }
+
+        
+label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    margin-left: 5vw;
+    margin-top: 0.5vw;
+}
+
+        
+
+        label select,
+        label input {
+            width: 200px;
+            border: 2px solid #333;
+            border-radius: 6px;
+            height: 35px;
+            margin-left: 5vw;
+            margin-top: 0.5vw;
+            padding: 5px 10px;
+            font-size: 1rem;
+            background-color: #f8f8f8;
+            color: #333;
+            appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 12px;
+            cursor: pointer;
+                width: 200px;
+    height: 35px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    margin-left: 5vw;
+    margin-top: 0.5vw;
+    padding: 5px 10px;
+    font-size: 1rem;
+    line-height: 1.2;
+    background-color: #f8f8f8;
+    color: #333;
+    box-sizing: border-box;
+
+        }
+
+        label select:hover,
+        label select:focus {
+            border-color: #555;
+            background-color: #fff;
+            outline: none;
+        }
+
+        .sbmit {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 2vw;
+            margin-bottom: 2vw;
+        }
+.sbmit button {
+    height: 45px;
+    width: 40%;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sbmit button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.sbmit button:active {
+    background-color: #004080;
+    transform: translateY(0);
+}
