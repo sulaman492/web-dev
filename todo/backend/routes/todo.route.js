@@ -6,15 +6,15 @@ const router=express.Router()
 
 router.get("/",async(req,res)=>{
     try {
-        const todo=todo.find();
-        res.json(todo)
+        const todos=await todo.find();
+        res.json(todos)
     } catch (error) {
         res.status(500).json({message:error.message})
     }
 })
 
 router.post("/",async(req,res)=>{
-    const Todo=new todo({
+    const Todo=await new todo({
         text:req.body.text
     })
     try {
