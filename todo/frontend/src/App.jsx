@@ -5,15 +5,53 @@ import { MdModeEditOutline } from "react-icons/md";
 import { FaTrash } from "react-icons/fa6";
 import { IoClipboardOutline } from "react-icons/io5";
 import axios from "axios";
-import Todo from "../../backend/model/todo.model"
-import { set } from "mongoose";
 
 function App() {
+
+  // const first = useRef(second)
 
   const [newTodo, setNewTodo] = useState("")
   const [Todos, setTodos] = useState([])
   const [editingTodo,setEditingTodo]=useState(null)
   const [editedText,setEditedText]=useState("")
+
+const toggleTodo = async (id) => {
+  try {
+    const todo = Todos.find((t) => t._id === id);
+    const response = await axios.patch(`/api/routes/${id}`, {
+      completed: !todo.completed
+    });
+
+    // Replace the updated todo in state
+    setTodos(Todos.map((t) => (t._id === id ? response.data : t)));
+  } catch (error) {
+    console.log(error);
+  }
+};
+  const deleteTodo=async (id) => {
+    try {
+      await axios.delete(`api/routes/${id}`);
+      setTodos(Todos.filter((t)=>t._id!==id))
+    } catch (error) {
+      console.log(error);
+      
+    }
+  }
+
+  const saveEditing=async (id) => {
+    try{
+    const response=await axios.patch(`/api/routes/${id}`,{
+      text:editedText
+    })
+    setTodos(Todos.map((t) => (t._id === id ? response.data : t)));
+setEditingTodo(null);
+setEditedText("");
+}catch(error){
+    alert(error);
+    
+  }
+
+  }
 
   const startEditing=(t)=>{
       setEditingTodo(t._id);
@@ -58,25 +96,29 @@ function App() {
           <button type="submit" className="cursor-pointer bg-blue-500 hover:bg-blue-600 rounded-md text-white px-4 py-2">Add Task</button>
 
         </form>
-        <div>
+        <div className="mt-4">
           
           {Todos.length===0?(
-              <div>Not yet</div>):(
+              <div>Not yuiwefiwet</div>):(
             Todos.map((t) =>(
-              <div key={t._id}  >
+              <div key={t._id} className="flex flex-col text-center gap-4" >
                 {editingTodo===t._id?(
                   <div className="flex gap-x-3 items-center">
                   <input className=" flex-1 rounded-lg outline-none focus:ring-2 focus:ring-blue-400 shadow-inner text-gray-700 border p-3 border-gray-200" type="text" value={editedText} onChange={(e)=>setEditedText(e.target.value)}></input>
                   <div className="flex gap-x-2">
-                    <button className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 cursor-pointer"><MdOutlineDone/></button>
+                    <button onClick={()=>saveEditing(t._id)} className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 cursor-pointer"><MdOutlineDone/></button>
                   <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 cursor-pointer" onClick={()=>{setEditingTodo(null)}}><IoClose/></button>
                 </div>
                   </div>
                 ):(
-                  <div>
-                    {t.text}
-                    <button onClick={()=>startEditing(t)}><MdModeEditOutline/></button>
-                    <button><FaTrash/></button>
+                  <div className="flex items-center justify-between">
+                    <div onClick={()=>toggleTodo(t._id)} className="flex items-center gap-x-4"><button className={`flex items-center justify-center rounded-full h-5 w-5 border ${t.completed ? "bg-green-500 border border-green-500 ":"border-gray-300 hover:border-blue-400   "}`}>{t.completed && <MdOutlineDone/> }</button>
+                    <span className="font-medium text-gray-800">
+                    {t.text}</span>
+                    </div>
+                    <div className="flex gap-x-2 ">
+                    <button className="text-blue-500 hover:text-blue-600 hover:bg-blue-50 duration-200 rounded-lg " onClick={()=>startEditing(t)}><MdModeEditOutline/></button>
+                    <button onClick={()=>deleteTodo(t._id)} className="text-red-500 hover:text-red-600 hover:bg-red-50 duration-200 rounded-lg" ><FaTrash/></button></div>
                   </div>
                 )}
               </div>
