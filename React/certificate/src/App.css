@@ -1,0 +1,24 @@
+.button{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+button{
+  padding: 23px;
+  width: 100px;
+  border: 2px solid white;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  background-color: green;
+  color: white;
+  
+}
+.slideshow{
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
